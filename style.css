@@ -28,7 +28,7 @@
 
 .brand-text h1 {
   font-size: 1.8rem;
-  color: #ffffff;
+  color: #180202;
   font-weight: 700;
   margin: 0;
 }
@@ -80,7 +80,7 @@
   padding: 120px 0%;
   min-height: 70vh; /* full screen height */
   width: 100%;
-  background: url('crosswallpaper.jpg') center/cover no-repeat; /* change path as needed */
+  background: url('raycross.png') center/cover no-repeat; /* change path as needed */
   background-attachment: fixed;
   text-align: center;
   color: #fff;
@@ -1531,283 +1531,151 @@ body {
     color: #555;
 }
 
-/* --- Asymmetrical Styling (The Trend) --- */
-
-/* Card 1: Large and spans two columns on the left */
-.card-large {
-    grid-column: span 2; 
+/* --- Global Styles for Footer --- */
+.footer-church {
+    /* Use a deep, spiritual color palette: Deep Navy/Teal for background */
+    background-color: #1a374d; 
+    color: #f0f0f0; /* Light text color for contrast */
+    font-family: 'Roboto', sans-serif;
+    padding-top: 50px; /* Space above the content */
 }
 
-/* Card 2: Small and fills the remaining column (right side, top) */
-.card-small {
-    grid-column: span 1;
-    background-color: #f7f7f7; /* Slight color difference for small card */
-    padding: 35px 25px;
-}
-
-/* Card 3: Large, but placed below Card 2 and is OFFSET */
-.card-offset-bottom {
-    grid-column: 2 / span 2; /* Starts in column 2 and spans 2 columns */
-    margin-top: -80px; /* **Negative margin to overlap/offset it upward** */
-    background-color: #e6e8f3; /* Light accent color */
-    border-top-color: #2c3e50;
-}
-
-
-/* Mobile Fallback: Stack columns vertically */
-@media (max-width: 992px) {
-    .mosaic-grid-cards {
-        grid-template-columns: 1fr; /* Single column layout on small screens */
-        gap: 40px;
-    }
-    .card-large, .card-small {
-        grid-column: span 1;
-    }
-    .card-offset-bottom {
-        grid-column: span 1;
-        margin-top: 0; /* Remove offset on mobile */
-    }
-}
-
-/* ===========================
-   SOCIAL ICONS INSIDE FOOTER
-=========================== */
-.social-icons {
-    margin-top: 20px;
-    display: flex;
-    gap: 18px;
-}
-
-.social-icons a {
-    width: 42px;
-    height: 42px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.18);
-    border: 1px solid rgba(255, 255, 255, 0.35);
-    backdrop-filter: blur(10px);
-
-    color: #FFD700;
-    font-size: 18px;
-    transition: 0.4s;
-
-    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-}
-
-.social-icons a:hover {
-    background: #FFD700;
-    color: #3e0f23; /* matches burgundy theme */
-    transform: translateY(-4px) scale(1.1);
-    box-shadow: 0 6px 18px rgba(255, 215, 0, 0.5);
-}
-
-/* ===================== FOOTER: LARGE LOGO FOCUSED STYLE (Deep Teal/Amber) ===================== */
-
-.footer-large-logo {
-    /* Use Primary Dark (Deep Teal) background */
-    background-color: var(--color-primary-dark); 
-    color: var(--color-text-light);
-    padding-top: 80px; /* More padding for a premium feel */
-    font-family: var(--font-body);
-}
-
-.footer-container-large-logo {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    max-width: 1400px;
+/* --- Main Container Layout (CSS Grid) --- */
+.footer-container {
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 0 5%;
-    flex-wrap: wrap;
-    padding-bottom: 60px;
+    padding: 0 20px 40px;
+    display: grid;
+    /* Define 4 columns, adjusting the first one to be larger for the logo/about text */
+    grid-template-columns: 2fr 1fr 1fr 1.5fr; 
+    gap: 30px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Subtle divider */
 }
 
-.footer-col-large-logo {
-    flex-basis: 30%; 
-    min-width: 250px;
-    margin-bottom: 40px;
+/* --- Footer Column General Styling --- */
+.footer-col {
+    padding: 10px;
 }
 
-.footer-col-brand-focus {
-    /* Give the logo column extra space */
-    flex-basis: 35%; 
-}
-
-/* --- LOGO STYLES (THE NEW REQUIREMENT) --- */
-.footer-logo-massive {
-    width: 120px; /* significantly larger logo */
-    height: 120px;
-    object-fit: contain;
+/* --- Logo & About Column --- */
+.footer-about .footer-logo {
+    max-width: 70px; /* Control logo size */
+    height: auto;
     margin-bottom: 10px;
-    /* Optional: Add a subtle glow for a spiritual effect */
-    filter: drop-shadow(0 0 5px rgba(255, 193, 7, 0.5)); 
+    filter: brightness(1.2); /* Slightly brighten the logo against the dark background */
 }
 
-.footer-brand-title-focus {
-    color: var(--color-text-light);
-    font-size: 1.8em;
-    font-family: var(--font-heading);
-    margin: 0 0 15px 0;
-    letter-spacing: 2px;
-}
-
-.footer-mission-text-focus {
-    font-size: 1em;
-    opacity: 0.8;
-    line-height: 1.6;
-    margin-bottom: 25px;
-}
-
-/* --- Social Icons --- */
-.footer-social-focus a {
-    color: var(--color-text-light);
-    margin-right: 25px;
-    font-size: 1.5em;
-    transition: color 0.3s ease;
-}
-
-.footer-social-focus a:hover {
-    color: var(--color-accent-gold); /* Amber hover */
-}
-
-/* --- Headings --- */
-.footer-heading-focus {
-    color: var(--color-accent-gold); /* Amber Heading */
-    font-size: 1.3em;
-    font-family: var(--font-heading);
-    letter-spacing: 1.5px;
+.footer-about .footer-title {
+    font-size: 1.4rem;
     margin-top: 0;
-    margin-bottom: 25px;
+    margin-bottom: 5px;
+    color: #f7b731; /* Use a light gold/cream accent for the main title */
 }
 
-/* --- Links --- */
-.footer-links-list-focus {
+.footer-about p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: #c0c0c0;
+}
+
+/* --- Heading Styles --- */
+.footer-col h4 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    /* Underline effect using a pseudo-element for style */
+    display: inline-block;
+    color: #f0f0f0;
+}
+
+/* --- List Styling (Links) --- */
+.footer-col ul {
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
-.footer-links-list-focus li {
-    margin-bottom: 15px;
+.footer-col ul li {
+    margin-bottom: 8px;
 }
 
-.footer-links-list-focus a {
-    color: var(--color-text-light);
+.footer-col ul li a {
     text-decoration: none;
-    font-size: 1em;
-    opacity: 0.85;
-    transition: color 0.3s ease;
-    border-left: 2px solid transparent; /* Subtle link separator */
-    padding-left: 8px;
-}
-
-.footer-links-list-focus a:hover {
-    opacity: 1;
-    color: var(--color-accent-gold); 
-    border-left: 2px solid var(--color-accent-gold);
-}
-
-/* --- Contact Info --- */
-.footer-contact-item-focus {
-    display: flex;
-    align-items: flex-start;
-    font-size: 1em;
-    margin-bottom: 15px;
-    opacity: 0.9;
-}
-
-.footer-contact-item-focus i {
-    color: var(--color-accent-gold);
-    margin-right: 12px;
-    font-size: 1.1em;
-    margin-top: 3px;
-}
-
-/* --- Donate Button --- */
-.btn-donate-footer {
+    color: #c0c0c0; /* Lighter color for list items */
+    font-size: 0.9rem;
+    transition: color 0.3s, padding-left 0.3s;
     display: inline-block;
-    background-color: var(--color-accent-gold);
-    color: var(--color-primary-dark); /* Dark Teal Text on Amber Button */
-    padding: 12px 25px;
-    border-radius: 4px;
-    text-decoration: none;
-    font-weight: 700;
-    text-transform: uppercase;
-    font-size: 1em;
-    margin-top: 20px;
-    transition: background-color 0.3s ease;
 }
 
-.btn-donate-footer:hover {
-    background-color: #FFD568; /* Slightly lighter amber */
+.footer-col ul li a:hover {
+    color: #f7b731; /* Gold accent on hover */
+    padding-left: 5px; /* Subtle hover effect */
 }
 
-/* --- Bottom Credit Row --- */
-.footer-bottom-focus {
-    background-color: #00382E; /* Darker shade of Teal */
-    padding: 20px 5%;
-    font-size: 0.85em;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+/* --- Contact Info Column --- */
+.footer-col p {
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+    color: #c0c0c0;
 }
 
-.footer-credit-focus {
-    color: var(--color-accent-gold);
-    font-weight: 500;
-    margin: 0;
+.footer-col p:last-child {
+    margin-bottom: 0;
 }
 
-.footer-copyright-focus {
-    margin: 0;
-    opacity: 0.7;
+/* --- Footer Bottom Section (Copyright) --- */
+.footer-bottom {
+    text-align: center;
+    padding: 20px 20px;
+    font-size: 0.8rem;
+    color: #a0a0a0;
+    background-color: #152d40; /* Slightly darker shade for the bottom bar */
 }
 
+.footer-bottom p {
+    margin: 5px 0;
+}
 
-/* --- Responsive Adjustments --- */
-@media (max-width: 1000px) {
-    .footer-container-large-logo {
-        /* Align content to the left */
-        justify-content: flex-start; 
-        gap: 30px;
+/* --- Responsiveness: Adjust for Tablets and Smaller Screens --- */
+@media (max-width: 992px) {
+    .footer-container {
+        /* Change to 2 columns for a better flow on medium screens */
+        grid-template-columns: 1fr 1fr; 
     }
-    .footer-col-large-logo {
-        flex-basis: 45%; 
-        min-width: 45%;
-    }
-    .footer-col-brand-focus {
-        flex-basis: 100%; /* Brand/Logo takes full width on tablets/mobile */
+
+    .footer-about {
+        /* Make the logo/about column span two columns */
+        grid-column: span 2; 
     }
 }
 
-@media (max-width: 600px) {
-    .footer-container-large-logo {
-        flex-direction: column;
-        align-items: center;
+/* --- Responsiveness: Adjust for Mobile Phones --- */
+@media (max-width: 576px) {
+    .footer-container {
+        /* Switch to a single column stack for small screens */
+        grid-template-columns: 1fr; 
+        padding-bottom: 20px;
+    }
+    
+    .footer-about {
+        grid-column: span 1; 
         text-align: center;
     }
-    .footer-col-large-logo {
-        min-width: 100%;
+    
+    .footer-about .footer-logo {
+        margin: 0 auto 10px;
+    }
+
+    .footer-col {
         text-align: center;
-        margin-bottom: 30px;
     }
-    .footer-contact-item-focus {
-        justify-content: center;
-    }
-    .footer-social-focus {
-        /* Center social icons by making them block elements for centering */
-        display: flex;
-        justify-content: center;
-    }
-    .footer-bottom-focus {
-        flex-direction: column;
-        padding: 15px 5%;
-    }
-    .footer-credit-focus, .footer-copyright-focus {
-        margin: 5px 0;
+
+    .footer-col ul {
+        text-align: center;
     }
 }
+
+
+
+
+

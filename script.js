@@ -40,3 +40,6 @@ document.querySelectorAll(".btn-read").forEach(button => {
     alert("Full article coming soon! Stay tuned for updates from Mount Way Church.");
   });
 });
+
+
+
