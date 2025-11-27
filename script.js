@@ -43,3 +43,5 @@ document.querySelectorAll(".btn-read").forEach(button => {
 
 
 
+//*contactpage js *//
+

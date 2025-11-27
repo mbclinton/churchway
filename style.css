@@ -27,46 +27,13 @@
 }
 
 .brand-text h1 {
-  font-size: 1.8rem;
-  color: #180202;
-  font-weight: 700;
+  font-size: 2.8rem;
+  color:  #ffffff;
+  font-weight: 100;
   margin: 0;
 }
 
-/* ===============================
-   NAVBAR
-================================= */
-.navbar {
-  background-color:#2c3678;
-  position: sticky;
-  top: 0;
-  width: 100%;
-  z-index: 100;
-}
 
-.nav-links {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  padding: 12px 0;
-  margin: 0;
-}
-
-.nav-links a {
-  text-decoration: none;
-  color: #ffffff;
-  font-weight: 500;
-  font-size: 1.05rem;
-  padding: 8px 16px;
-  border-radius: 5px;
-  transition: all 0.3s ease;
-}
-
-.nav-links a:hover {
-  color: #f5d76e;
-  background-color: rgba(255, 255, 255, 0.15);
-}
 
 /* ===============================
    HERO SECTION
@@ -267,10 +234,6 @@ footer {
   font-size: 0.95em;
 }
 
-footer h2 {
-  color: #f5ab6e;
-  margin-bottom: 10px;
-}
 
 /* ===============================
    RESPONSIVE DESIGN
@@ -315,8 +278,8 @@ footer h2 {
 :root {
     --color-purple-primary: #2c3678; /* Navbar, Footer */
     --color-blue-secondary: #ffffff; /* Headings, Links */
-    --color-gold-accent: #eef56e; /* Hover, Highlights */
-    --color-bg-light: #fefefe; /* Main Background */
+    --color-gold-accent: #f7b731; /* Hover, Highlights */
+    --color-bg-light: #1c1616; /* Main Background */
     --color-text-dark: #333;
     --padding-section: 80px 5%;
 }
@@ -372,7 +335,7 @@ h1, h2 {
 
 .nav-links a {
     text-decoration: none;
-    color: #ffffff;
+    color: #ccc9c9;
     font-weight: 500;
     font-size: 1.05rem;
     padding: 8px 16px;
@@ -383,7 +346,7 @@ h1, h2 {
 .nav-links a:hover,
 .nav-links a.active {
     color: var(--color-gold-accent);
-    background-color: rgba(255, 255, 255, 0.15);
+   
 }
 
 /* ===================== HERO SECTION DESIGN ===================== */
@@ -541,64 +504,160 @@ h1, h2 {
 
 
 
+/* ==========================
+     PREMIUM GOLD THEME
+     WITH ANIMATIONS
+   ========================== */
 
-.welcome-section-2 {
-  padding: 80px 0;
-  background: linear-gradient(135deg, #2c3678, #334399, #a6a6d4, #dfe3ff);
-
-  display: flex;
-  justify-content: center;
-}
-
-.welcome-container-2 {
-  width: 90%;
-  max-width: 1200px;
-  display: grid;
-  grid-template-columns: 1.2fr 1fr;
-  gap: 50px;
-  align-items: center;
-}
-
-.welcome-left h2 {
-  font-size: 38px;
-  font-weight: 700;
-  color: white;
-}
-
-.highlight-2 {
-  color: #ffd369; /* gold highlight */
-}
-
-.welcome-left p {
-  color: white;
-  opacity: 0.95;
-  font-size: 17px;
-  line-height: 1.8;
-  margin-top: 15px;
-}
-
-.image-frame {
-  background: white;
-  padding: 10px;
-  border-radius: 25px;
-  box-shadow: 0px 12px 35px rgba(0, 0, 0, 0.25);
-}
-
-.image-frame img {
+/* Fade-in on load */
+.gold-welcome {
   width: 100%;
-  border-radius: 18px;
+  padding: 120px 50px;
+  background: #f8f4e8;
+  animation: fadeIn 1.2s ease-in-out;
 }
 
-/* Responsive */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.gold-container {
+  max-width: 1400px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  gap: 70px;
+}
+
+/* LEFT SECTION */
+.gold-left {
+  flex: 1;
+  border-left: 4px solid #d4af37;
+  padding-left: 30px;
+
+  /* slide-up animation */
+  animation: slideUp 1.2s ease-out;
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.gold-tag {
+  font-size: 18px;
+  letter-spacing: 3px;
+  color: #d4af37;
+  font-weight: 600;
+  margin-bottom: 10px;
+  transition: 0.4s ease;
+}
+
+.gold-title {
+  font-size: 52px;
+  font-weight: 800;
+  color: #1e1e1e;
+  line-height: 1.1;
+  transition: 0.4s ease;
+}
+
+.gold-title span {
+  color: #d4af37;
+  transition: 0.4s ease;
+}
+
+.gold-text,
+.gold-small {
+  transition: 0.4s ease;
+}
+
+.gold-left:hover .gold-title span {
+  text-shadow: 0 0 12px rgba(212,175,55,0.6);
+}
+
+/* BUTTON */
+.gold-btn {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 14px 38px;
+  background: #d4af37;
+  color: #1e1e1e;
+  border-radius: 50px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: 0.35s ease;
+  box-shadow: 0 8px 20px rgba(212, 175, 55, 0.35);
+}
+
+.gold-btn:hover {
+  background: #cda82f;
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 10px 30px rgba(212, 175, 55, 0.55);
+}
+
+/* RIGHT IMAGE SIDE */
+.gold-right {
+  flex: 1;
+  text-align: center;
+
+  /* zoom-in animation */
+  animation: zoomIn 1.3s ease-out;
+}
+
+@keyframes zoomIn {
+  from { transform: scale(0.92); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.gold-frame {
+  background: linear-gradient(135deg, #d4af37, #b48c1c);
+  padding: 12px;
+  border-radius: 22px;
+  box-shadow: 0 12px 35px rgba(0,0,0,0.25);
+
+  /* floating effect */
+  animation: floatImg 4s ease-in-out infinite;
+}
+
+@keyframes floatImg {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+.gold-frame img {
+  width: 100%;
+  border-radius: 16px;
+  transition: transform 0.3s ease;
+}
+
+.gold-frame:hover img {
+  transform: scale(1.03);
+}
+
+.gold-caption {
+  margin-top: 12px;
+  font-size: 15px;
+  color: #555;
+  font-style: italic;
+  opacity: 0.9;
+}
+
+/* RESPONSIVE */
 @media (max-width: 900px) {
-  .welcome-container-2 {
-    grid-template-columns: 1fr;
+  .gold-container {
+    flex-direction: column;
     text-align: center;
   }
 
-  .image-frame {
-    max-width: 360px;
-    margin: 20px auto 0;
+  .gold-left {
+    padding-left: 0;
+    border-left: none;
+  }
+
+  .gold-title {
+    font-size: 38px;
   }
 }
 
@@ -606,7 +665,7 @@ h1, h2 {
 
 
 
-/* ---------------------------------------------------- */
+/* --------------------community reflection-------------------------------- */
 /* ===================== GLOBAL COLORS & FONTS (Deep Blue/Violet Scheme) ===================== */
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@300;400;500;700&display=swap');
 
@@ -1559,7 +1618,7 @@ body {
 
 /* --- Logo & About Column --- */
 .footer-about .footer-logo {
-    max-width: 70px; /* Control logo size */
+    max-width: 100px; /* Control logo size */
     height: auto;
     margin-bottom: 10px;
     filter: brightness(1.2); /* Slightly brighten the logo against the dark background */
@@ -1569,7 +1628,7 @@ body {
     font-size: 1.4rem;
     margin-top: 0;
     margin-bottom: 5px;
-    color: #f7b731; /* Use a light gold/cream accent for the main title */
+    color: #ffffff; /* Use a light gold/cream accent for the main title */
 }
 
 .footer-about p {
@@ -1676,6 +1735,799 @@ body {
 }
 
 
+
+
+
+/*contact css */
+
+/*
+========================================
+1. GLOBAL & RESET STYLES
+========================================
+*/
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+}
+
+/* Ensure global box-sizing consistency (Important for responsiveness) */
+* {
+    box-sizing: border-box;
+}
+
+/*
+========================================
+2. HERO SECTION (Responsive Font/Spacing)
+========================================
+*/
+.page-contact-hero {
+    /* Background Setup (Remains consistent) */
+    background: url("contactus.png") no-repeat center/cover;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center content horizontally */
+    text-align: center;
+    
+    /* Responsive Styling (Mobile Default) */
+    color: #ffffff;
+    padding: 2rem 1rem; /* Smaller padding for mobile */
+    margin-bottom: 2rem;
+    border-radius: 0 0 1rem 1rem;
+    
+    /* Responsive Font Size using clamp() for smooth scaling */
+    /* Min: 2.5rem | Preferred: 7vw | Max: 5.5rem */
+    font-size: clamp(2.5rem, 7vw, 5.5rem);
+    font-weight: 800; 
+}
+
+/* Desktop adjustment for radius and margin */
+@media (min-width: 1024px) {
+    .page-contact-hero {
+        padding: 40px;
+        margin-bottom: 50px;
+        border-radius: 0 0 20px 20px;
+    }
+}
+
+
+/*
+========================================
+3. MAIN CONTACT CONTAINER STYLES
+========================================
+*/
+.contact-container {
+    width: 100%;
+    max-width: 850px; 
+    padding: 2rem 1rem; /* Responsive padding (2rem top/bottom, 1rem left/right) */
+    margin: 0 auto;
+    background-color: #ffffff; 
+}
+
+/* --- Top Info Section Styling (GRID/Flex) --- */
+
+/* Mobile Default: Stacked Columns (Flex or single column grid) */
+.info-grid {
+    display: flex; /* Using flexbox for better mobile control */
+    flex-direction: column; 
+    gap: 1.5rem; /* Smaller gap for mobile */
+    margin-bottom: 2rem;
+}
+
+.info-card h2 {
+    font-size: 1.25rem; /* Smaller font for mobile */
+    color: #333;
+    margin-bottom: 0.5rem;
+    font-weight: 800;
+}
+
+.info-card p {
+    font-size: 1rem; /* Standard font size */
+    color: #555;
+    margin: 0.3rem 0;
+}
+
+.separator {
+    border: none;
+    border-top: 1px solid #eee;
+    margin: 2rem 0; /* Responsive margin */
+}
+
+/* --- Form Heading Styling --- */
+h1 {
+    font-size: 2.5rem; /* Smaller font for mobile */
+    color: #333;
+    margin-bottom: 2rem;
+    font-weight: 800;
+}
+
+/* --- Form Elements Styling --- */
+.contact-form .form-group {
+    margin-bottom: 1.5rem; /* Responsive margin */
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form input[type="url"],
+.contact-form textarea {
+    width: 100%;
+    padding: 0.8rem 0; /* Smaller vertical padding */
+    border: none; 
+    border-bottom: 1px solid #ccc;
+    font-size: 1rem;
+    color: #555;
+    background-color: transparent;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-bottom-color: #333; 
+}
+
+/* --- Submit Button Styling --- */
+.contact-form button {
+    width: 100%;
+    padding: 1rem; /* Smaller padding for mobile */
+    background-color: #1a374d; 
+    color: white;
+    border: none;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    letter-spacing: 1px; /* Slightly reduced letter spacing */
+}
+
+.contact-form button:hover {
+    background-color: #1f5985;
+}
+
+
+/*
+========================================
+4. MEDIA QUERIES (Tablet/Desktop Layout)
+========================================
+*/
+
+/* Tablet and larger screens (min-width: 768px) */
+@media (min-width: 768px) {
+    .contact-container {
+        padding: 40px; /* Revert to original padding for large screens */
+    }
+
+    /* Info Grid Layout: Switch to Two Columns */
+    .info-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 50px;
+        margin-bottom: 50px;
+    }
+
+    .info-card h2 {
+        font-size: 1.5em; /* Revert to original font size */
+    }
+
+    .separator {
+        margin: 50px 0;
+    }
+
+    /* Form Heading */
+    h1 {
+        font-size: 3em; /* Revert to original large font size */
+        margin-bottom: 50px;
+    }
+
+    /* Submit Button */
+    .contact-form button {
+        padding: 20px;
+        font-size: 1.2em;
+        letter-spacing: 2px;
+    }
+}
+
+
+
+
+
+
+/*about css */
+
+
+
+/* --- Dropdown Specific Styles --- */
+/* ===================================
+   DROPDOWN CONTAINER
+=================================== */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* ===================================
+   MENU BOX
+=================================== */
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+
+  min-width: 190px;
+  margin: 0;
+  padding: 6px 0;
+  list-style: none;
+
+  background-color: #fff; /* same color */
+  border-radius: 8px;
+  border: 1px solid #eee; /* same tone */
+
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+
+  opacity: 0;
+  visibility: hidden;
+
+  transform: scale(0.95);
+  transform-origin: top left;
+  transition: all 0.25s ease;
+
+  z-index: 50;
+}
+
+/* SHOW MENU */
+.dropdown:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+}
+
+/* ===================================
+   MENU ITEMS
+=================================== */
+.dropdown-menu li {
+  display: block;
+}
+
+.dropdown-menu a {
+  font-size: 15px;
+  color: #333; /* same color */
+  text-decoration: none;
+
+  padding: 12px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  transition: background 0.25s ease, padding-left 0.25s ease;
+}
+
+/* Hover effect (same colors, fresh feel) */
+.dropdown-menu a:hover {
+  background-color: #f5f5f5; /* same color */
+  padding-left: 22px;
+}
+
+/* Optional right side chevron */
+.dropdown-menu a::after {
+  content: "›";
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.dropdown-menu a:hover::after {
+  opacity: 1;
+}
+
+
+/* what we do for belive */
+
+/* ===========================
+   Section and Container
+=========================== */
+.mwci-section {
+    padding: 60px 20px;
+    background: linear-gradient(120deg, #f7f7f7, #e0e6f1); /* subtle gradient */
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ===========================
+   Header Styling
+=========================== */
+.section-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+.section-header h2 {
+    font-size: 2.8em;
+    color: #2c3678;
+    font-weight: 700;
+    margin-bottom: 12px;
+    letter-spacing: 1px;
+}
+.intro-text {
+    font-size: 1.15em;
+    color: #555;
+    max-width: 750px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* ===========================
+   Beliefs Grid (Flexbox)
+=========================== */
+.beliefs-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+/* ===========================
+   Belief Item Styling
+=========================== */
+.belief-item {
+    background:#FAF8F0;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+    padding: 35px 25px;
+    text-align: center;
+    flex: 1 1 300px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease, background 0.4s ease;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Hover Effects */
+.belief-item::before {
+    content: '';
+    position: absolute;
+    width: 120%;
+    height: 120%;
+    background: rgba(0, 123, 255, 0.1);
+    top: -110%;
+    left: -10%;
+    transform: rotate(45deg);
+    transition: all 0.5s ease;
+}
+.belief-item:hover::before {
+    top: -10%;
+    left: -10%;
+}
+.belief-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+    background: #ffffff;
+}
+
+/* Icon Styling with subtle animation */
+.icon-placeholder {
+    font-size: 3.2em;
+    margin-bottom: 18px;
+    color: #2c3678;
+    transition: transform 0.4s ease, color 0.4s ease;
+}
+.belief-item:hover .icon-placeholder {
+    transform: scale(1.2) rotate(10deg);
+    color: #007bff;
+}
+
+/* Text Styling */
+.belief-item h3 {
+    font-size: 1.6em;
+    color: #2c3678;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+.belief-item p {
+    color: #555;
+    line-height: 1.6;
+    font-size: 1em;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+    .belief-item {
+        flex: 1 1 45%; /* two items per row */
+    }
+}
+@media (max-width: 768px) {
+    .belief-item {
+        flex: 1 1 100%; /* stacked */
+    }
+}
+
+
+
+/* reflaction page */
+
+
+/* our_pastor page */
+/* Full grey background */
+.pastor-main-section {
+    background: #eaeaea;
+    padding: 80px 0;
+    padding-top: 0px;
+}
+
+/* Main container */
+.pastor-main-wrapper {
+    max-width: 1800px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    background: white;
+    height: 500px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* LEFT SIDE — IMAGE */
+.pastor-main-left {
+    width: 50%;
+    height: 100%;
+}
+
+.pastor-main-left img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* RIGHT SIDE — CONTENT */
+.pastor-main-right {
+    width: 50%;
+    padding: 60px 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Role Tag */
+.pastor-main-role {
+    font-size: 15px;
+    background: #f2f2f2;
+    padding: 8px 16px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    font-weight: 700;
+    display: inline-block;
+    margin-bottom: 20px;
+    color: #8e8e92;
+    margin-left: 0px;
+    margin-right: 460px;
+}
+
+/* Pastor Name */
+.pastor-main-name {
+    font-size: 40px;
+    font-weight: 700;
+    margin: 0 0 15px;
+    color: #1c1616;
+}
+
+/* Description */
+.pastor-main-description {
+    font-size: 18px;
+    color: #8c8c8c;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    margin-top: 10px;
+    
+    
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .pastor-main-wrapper {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .pastor-main-left, 
+    .pastor-main-right {
+        width: 100%;
+    }
+
+    .pastor-main-right {
+        padding: 40px;
+        text-align: center;
+    }
+}
+
+
+/* ================================
+   MOBILE RESPONSIVE
+=================================== */
+
+@media (max-width: 900px) {
+
+    .pastor-wrapper {
+        flex-direction: column;
+    }
+
+    .pastor-left,
+    .pastor-right {
+        width: 100%;
+    }
+
+    .pastor-right {
+        padding: 40px 30px;
+        text-align: center;
+    }
+
+    .pastor-name {
+        font-size: 32px;
+    }
+}
+
+/* FULL BACKGROUND */
+.leaders-section {
+    background: #eeeeee;
+    padding: 80px 0;
+}
+
+/* CONTAINER */
+
+.leadership-title {
+    display: inline-block;
+    margin: 40px auto 50px auto;
+    padding: 12px 30px;
+    background: #ffffff;
+    border-radius: 40px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #8e8e92;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+     display: block;
+    text-align: center;
+    width: fit-content;
+    display: block;
+    text-align: center;
+    width: fit-content;
+
+    margin: 120px auto 50px auto;  /* ⬅️ increase this number to move it DOWN */
+    
+
+}
+
+
+/* ===============================
+   LEADERS SECTION MAIN AREA
+================================= */
+.leaders-section {
+    background: #eeeeee;
+    padding: 80px 0;
+}
+
+/* ===============================
+   SECTION TITLE DESIGN
+================================= */
+.leadership-title {
+    display: block;
+    margin: 120px auto 50px auto;
+    padding: 12px 30px;
+    background: #ffffff;
+    border-radius: 40px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #8e8e92;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+    text-align: center;
+    width: fit-content;
+}
+
+/* ===============================
+   GRID CONTAINER (3 PER ROW)
+================================= */
+.leaders-container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 20px;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* ⬅️ EXACTLY 3 per row */
+    gap: 35px;
+}
+
+/* ===============================
+   LEADER CARD BOX
+================================= */
+.leader-card {
+    background: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect */
+.leader-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* ===============================
+   IMAGE INSIDE CARD
+================================= */
+.leader-photo {
+    width: 100%;
+    height: 360px;
+    object-fit: cover;
+}
+
+/* ===============================
+   INFORMATION BOX
+================================= */
+.leader-info {
+    padding: 25px 30px;
+}
+
+.leader-name {
+    font-size: 26px;
+    margin: 0 0 8px;
+    font-weight: 700;
+}
+
+.leader-role {
+    color: #666;
+    margin: 0 0 20px;
+    font-size: 16px;
+}
+
+/* ===============================
+   BIOGRAPHY LINK
+================================= */
+.leader-link {
+    color: #0093ff;
+    font-size: 18px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.leader-link:hover {
+    text-decoration: underline;
+}
+
+/* ===============================
+   RESPONSIVE BREAKPOINTS
+================================= */
+
+/* Tablet: 2 per row */
+@media (max-width: 900px) {
+    .leaders-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .leader-photo {
+        height: 300px;
+    }
+}
+
+/* Mobile: 1 per row */
+@media (max-width: 600px) {
+    .leaders-container {
+        grid-template-columns: 1fr;
+    }
+
+    .leader-photo {
+        height: 260px;
+    }
+}
+
+
+/* our belief */
+.hero-belief {
+   position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  padding: 120px 0%;
+  min-height: 70vh; /* full screen height */
+  width: 100%;
+  background: url('images/ourbelief1.png') center/cover no-repeat;
+  text-align: center;
+
+  /* ADD TEXT STYLES */
+  color: #ffffff;      /* change text color */
+  font-size: 32px;     /* change font size */
+  font-weight: 600;    /* optional - make bold */
+  
+  
+}
+
+/* ===== TOP QUOTE SECTION ===== */
+.belief-quote-section {
+  background: #f3f3f3;
+  padding: 70px 20px;
+  text-align: center;
+}
+
+.belief-quote-box {
+  max-width: 900px;
+  margin: 0 auto;
+  border-top: 1px solid #dcdcdc;
+  border-bottom: 1px solid #dcdcdc;
+  padding: 40px 20px;
+  position: relative;
+}
+
+.belief-quote-box::before {
+  content: "❝";
+  font-size: 40px;
+  color: #cccccc;
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #f3f3f3;
+  padding: 0 10px;
+}
+
+.belief-quote {
+  font-size: 24px;
+  font-style: italic;
+  color: #777;
+  line-height: 1.6;
+}
+
+/* ===== MAIN CONTENT SECTION ===== */
+.belief-content-section {
+  background: #ffffff;
+  padding: 100px 20px;
+}
+
+.belief-content-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.belief-heading {
+  font-size: 30px;
+  color: #c41212;
+  margin-bottom: 20px;
+  margin-top: 1px;
+}
+
+.belief-description {
+  font-size: 18px;
+  color: #4e4d4d;
+  line-height: 1.8;
+  margin-bottom: 40px;
+}
+
+/* BULLET LIST */
+.belief-list {
+  list-style-type: disc;
+  padding-left: 40px;      /* indent bullets */
+  margin-top: 20px;
+}
+
+.belief-list li {
+  margin-bottom: 35px;     /* spacing between belief items */
+}
+
+.belief-list h3 {
+  font-size: 24px;
+  color: #2c3678;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.belief-list p {
+  font-size: 17px;
+  color: #333;
+  line-height: 1.7;
+}
 
 
 

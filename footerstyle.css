@@ -1,0 +1,191 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+.footer-container {
+    background-color: darkslategray;
+    padding-bottom: 4rem;
+
+}
+.footer {
+    width: 80%;
+    height: 40vh;
+    background-color: rgb(56, 51, 67);
+    color: aliceblue;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0 auto;
+
+}
+.footer-heading {
+    display: flex;
+    flex-direction: column;
+    margin-right: 4rem;
+
+}
+*.footer-headingh h2 {
+    margin-bottom: 2rem;
+}
+*.footer-heading a {
+    color: #ffffff;
+    text-decoration: none;
+    margin-bottom: 0.5rem;
+}
+*.footer-heading a:hover {
+color: rgb(60, 255, 0);
+transition: 0.3s ease-out;
+}
+*.footer-email-form h2 {
+margin-bottom: 2rem;
+
+}
+
+*.footer-email-form {
+    width: 250px;
+    height: 40px;
+    border-radius: 4px;
+    outline: none;
+    border: none;
+    padding-left: 0.5rem;
+    font-size: 1rem;
+    margin-bottom: 1rem;   
+}
+*.footer-email-form::placeholder {
+    color: rgb(205, 50, 76);
+}
+
+*.footer-email-btn {
+    width: 100px;
+    height: 40px;
+    border-radius: 4px;
+    background-color: blue;
+}
+
+
+
+
+
+
+/* what we do for belive */
+
+/* ===========================
+   Section and Container
+=========================== */
+.mwci-section {
+    padding: 60px 20px;
+    background: linear-gradient(120deg, #f7f7f7, #e0e6f1); /* subtle gradient */
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ===========================
+   Header Styling
+=========================== */
+.section-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+.section-header h2 {
+    font-size: 2.8em;
+    color: #2c3678;
+    font-weight: 700;
+    margin-bottom: 12px;
+    letter-spacing: 1px;
+}
+.intro-text {
+    font-size: 1.15em;
+    color: #555;
+    max-width: 750px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* ===========================
+   Beliefs Grid (Flexbox)
+=========================== */
+.beliefs-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+/* ===========================
+   Belief Item Styling
+=========================== */
+.belief-item {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+    padding: 35px 25px;
+    text-align: center;
+    flex: 1 1 300px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease, background 0.4s ease;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Hover Effects */
+.belief-item::before {
+    content: '';
+    position: absolute;
+    width: 120%;
+    height: 120%;
+    background: rgba(0, 123, 255, 0.1);
+    top: -110%;
+    left: -10%;
+    transform: rotate(45deg);
+    transition: all 0.5s ease;
+}
+.belief-item:hover::before {
+    top: -10%;
+    left: -10%;
+}
+.belief-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+    background: #ffffff;
+}
+
+/* Icon Styling with subtle animation */
+.icon-placeholder {
+    font-size: 3.2em;
+    margin-bottom: 18px;
+    color: #2c3678;
+    transition: transform 0.4s ease, color 0.4s ease;
+}
+.belief-item:hover .icon-placeholder {
+    transform: scale(1.2) rotate(10deg);
+    color: #007bff;
+}
+
+/* Text Styling */
+.belief-item h3 {
+    font-size: 1.6em;
+    color: #2c3678;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+.belief-item p {
+    color: #555;
+    line-height: 1.6;
+    font-size: 1em;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+    .belief-item {
+        flex: 1 1 45%; /* two items per row */
+    }
+}
+@media (max-width: 768px) {
+    .belief-item {
+        flex: 1 1 100%; /* stacked */
+    }
+}
