@@ -6,7 +6,8 @@
   justify-content: space-between;
   align-items: center;
   padding: 10px 60px;
-  background-color: #2c3678;
+  background-color: #ded5bb;
+  
 
   
   
@@ -27,11 +28,37 @@
 }
 
 .brand-text h1 {
-  font-size: 2.8rem;
-  color:  #ffffff;
+  font-size: 2.5rem;
+  color: #4E344E;
   font-weight: 100;
   margin: 0;
 }
+
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+
+
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 60px;
+
+  background: linear-gradient(180deg, #e2ded2, #ffffff);
+
+  box-shadow:
+    0 1px 0 rgba(0, 0, 0, 0.1),
+    0 8px 22px rgba(0, 0, 0, 0.212);
+
+ 
+}
+
 
 
 
@@ -47,7 +74,7 @@
   padding: 120px 0%;
   min-height: 70vh; /* full screen height */
   width: 100%;
-  background: url('raycross.png') center/cover no-repeat; /* change path as needed */
+  background: url('nnnn.jpg') center/cover no-repeat; /* change path as needed */
   background-attachment: fixed;
   text-align: center;
   color: #fff;
@@ -60,7 +87,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.45); /* soft dark overlay */
+ 
   z-index: 1;
 }
 
@@ -100,7 +127,7 @@
 
 .community h2 {
   font-size: 2.2em;
-  color: #2a4d8f;
+  color:#3E2723;
   margin-bottom: 10px;
   font-family: 'Georgia', serif;
 }
@@ -227,7 +254,7 @@
    FOOTER
 ================================= */
 footer {
-  background-color:#293378;
+  background-color: #293378;
   color: white;
   text-align: center;
   padding: 10px 0;
@@ -276,11 +303,11 @@ footer {
 
 /* ===================== GLOBAL STYLES & RESETS ===================== */
 :root {
-    --color-purple-primary: #2c3678; /* Navbar, Footer */
-    --color-blue-secondary: #ffffff; /* Headings, Links */
+    --color-purple-primary: #4E344E; /* Navbar, Footer */
+    --color-blue-secondary: #4E344E; /* Headings, Links */
     --color-gold-accent: #f7b731; /* Hover, Highlights */
     --color-bg-light: #1c1616; /* Main Background */
-    --color-text-dark: #333;
+    --color-text-dark: #686868;
     --padding-section: 80px 5%;
 }
 
@@ -335,7 +362,7 @@ h1, h2 {
 
 .nav-links a {
     text-decoration: none;
-    color: #ccc9c9;
+    color: #4E344E;
     font-weight: 500;
     font-size: 1.05rem;
     padding: 8px 16px;
@@ -426,29 +453,6 @@ h1, h2 {
     gap: 10px;
 }
 
-/* ===================== CALL TO ACTION (CTA) DESIGN ===================== */
-.cta {
-    background-color: #f9f9f9;
-    text-align: center;
-    padding: 60px 5%;
-    border-top: 1px dashed #eee;
-}
-
-.cta h2 {
-    color: var(--color-text-dark);
-    font-size: 2em;
-    margin-bottom: 20px;
-}
-
-.cta .btn {
-    background-color: var(--color-gold-accent);
-    color: var(--color-text-dark) !important;
-}
-
-.cta .btn:hover {
-    background-color: #e6b840;
-}
-
 /* ===================== FOOTER ALIGNMENT ===================== */
 .footer {
     background-color: var(--color-purple-primary);
@@ -462,42 +466,6 @@ h1, h2 {
     margin: 5px 0;
 }
 
-/* ===================== RESPONSIVE DESIGN ===================== */
-@media (max-width: 900px) {
-    .program-container {
-        flex-direction: column; /* Stack image and text vertically */
-        align-items: center;
-        gap: 30px;
-    }
-
-    .program-img {
-        flex-basis: 100%;
-        max-width: 100%;
-        margin-bottom: 20px;
-    }
-
-    .program-text {
-        flex-basis: 100%;
-        padding-top: 0;
-        text-align: center;
-    }
-
-    .program-text h2 {
-        text-align: center;
-    }
-
-    .program-text ul {
-        padding-left: 20px;
-    }
-    
-    .program-text ul li {
-        justify-content: center;
-    }
-
-    .hero-community h1 {
-        font-size: 2.5em;
-    }
-}
 
 
 
@@ -523,7 +491,7 @@ h1, h2 {
 }
 
 .gold-container {
-  max-width: 1400px;
+  max-width: 1200px;
   margin: auto;
   display: flex;
   align-items: center;
@@ -533,8 +501,8 @@ h1, h2 {
 /* LEFT SECTION */
 .gold-left {
   flex: 1;
-  border-left: 4px solid #d4af37;
-  padding-left: 30px;
+  border-left: 4px solid #4E344E;
+  padding-left: 30px; 
 
   /* slide-up animation */
   animation: slideUp 1.2s ease-out;
@@ -548,22 +516,22 @@ h1, h2 {
 .gold-tag {
   font-size: 18px;
   letter-spacing: 3px;
-  color: #d4af37;
+  color: #4E344E;
   font-weight: 600;
   margin-bottom: 10px;
   transition: 0.4s ease;
 }
 
 .gold-title {
-  font-size: 52px;
-  font-weight: 800;
-  color: #1e1e1e;
+  font-size: 42px;
+  font-weight: 500;
+  color:#000000;
   line-height: 1.1;
   transition: 0.4s ease;
 }
 
 .gold-title span {
-  color: #d4af37;
+  color: #602e60;
   transition: 0.4s ease;
 }
 
@@ -573,7 +541,7 @@ h1, h2 {
 }
 
 .gold-left:hover .gold-title span {
-  text-shadow: 0 0 12px rgba(212,175,55,0.6);
+  text-shadow: 0 0 12px rgb(234, 223, 9);
 }
 
 /* BUTTON */
@@ -581,19 +549,19 @@ h1, h2 {
   display: inline-block;
   margin-top: 30px;
   padding: 14px 38px;
-  background: #d4af37;
-  color: #1e1e1e;
+  background: #4E344E;
+  color: #ffffff;
   border-radius: 50px;
-  font-weight: 700;
+  font-weight: 70;
   text-decoration: none;
   transition: 0.35s ease;
   box-shadow: 0 8px 20px rgba(212, 175, 55, 0.35);
 }
 
 .gold-btn:hover {
-  background: #cda82f;
+  background: #996199;
   transform: translateY(-5px) scale(1.05);
-  box-shadow: 0 10px 30px rgba(212, 175, 55, 0.55);
+  box-shadow: 0 10px 30px rgba(246, 214, 110, 0.55);
 }
 
 /* RIGHT IMAGE SIDE */
@@ -611,8 +579,8 @@ h1, h2 {
 }
 
 .gold-frame {
-  background: linear-gradient(135deg, #d4af37, #b48c1c);
-  padding: 12px;
+  background: linear-gradient(135deg, #4E344E, #9b5d9b);
+  padding: 8px;
   border-radius: 22px;
   box-shadow: 0 12px 35px rgba(0,0,0,0.25);
 
@@ -665,14 +633,20 @@ h1, h2 {
 
 
 
+
+
+
+
+
+
 /* --------------------community reflection-------------------------------- */
 /* ===================== GLOBAL COLORS & FONTS (Deep Blue/Violet Scheme) ===================== */
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@300;400;500;700&display=swap');
 
 :root {
     /* NEW Deep Blue/Violet Palette */
-    --color-primary-dark: #2c3678;       /* Primary Brand: Deep Blue/Violet */
-    --color-accent-gold: #2c3678;       /* Accent Color: Gold/Yellow */
+    --color-primary-dark: #4E344E;       /* Primary Brand: Deep Blue/Violet */
+    --color-accent-gold: #4E344E;       /* Accent Color: Gold/Yellow */
     
     /* Retained from Asymmetrical */
     --color-light-grey-bg: #F5F5F5;  /* Section Background */
@@ -821,7 +795,7 @@ body {
 }
 
 .btn-asym-read:hover {
-    background-color: #0e0467; /* Slightly darker gold on hover */
+    background-color: #784774; /* Slightly darker gold on hover */
     color: var(--color-charcoal-text);
 }
 
@@ -919,16 +893,13 @@ body {
 }
 
 
-
 /* ===================== SCHEDULE SECTION STYLES (White Background) ===================== */
 
 .schedule-asymmetrical {
     padding: var(--padding-large);
-    /* CHANGED: Set background to a light color (like the light grey or white) */
-    background-color: var(--color-light-grey-bg); 
+    background-color: var(--color-light-grey-bg);
     text-align: center;
-    /* CHANGED: Set default section text to dark for readability on light background */
-    color: var(--color-charcoal-text); 
+    color: var(--color-charcoal-text);
 }
 
 .schedule-container-asym {
@@ -938,8 +909,7 @@ body {
 
 /* Header and Intro */
 .asym-header-light {
-    /* RETAINED: Uses Accent Gold for main title for contrast */
-    color: var(--color-accent-gold); 
+    color: var(--color-accent-gold);
     font-family: var(--font-heading);
     font-size: 3.5em;
     letter-spacing: 5px;
@@ -947,46 +917,43 @@ body {
 }
 
 .schedule-intro-asym {
-    /* CHANGED: Intro text is dark */
     color: var(--color-charcoal-text);
     font-weight: 300;
 }
 
-/* Grid for the Service Blocks */
+/* Grid */
 .schedule-striped-wrapper {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
     margin-top: 50px;
 }
 
-/* Individual Schedule Card Styles */
+/* Schedule Cards */
 .schedule-list-block-asym {
-    background-color: var(--color-card-white); /* White card background */
-    color: var(--color-charcoal-text); 
+    background-color: var(--color-card-white);
+    color: var(--color-charcoal-text);
     padding: 30px;
     border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Lighter shadow on light BG */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     text-align: left;
-    border: 3px solid transparent; 
+    border: 3px solid transparent;
     transition: all 0.3s ease-out;
 }
 
-/* Accent Pulse Hover Effect */
 .schedule-list-block-asym:hover {
-    transform: translateY(-5px); 
-    border: 3px solid var(--color-accent-gold); 
+    transform: translateY(-5px);
+    border: 3px solid var(--color-accent-gold);
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
 }
 
-/* Block Title and Separator */
+/* Title */
 .schedule-block-title-asym {
-    /* CHANGED: Set title color to Primary Dark (Blue/Violet) */
-    color: var(--color-primary-dark); 
+    color: var(--color-primary-dark);
     font-family: var(--font-heading);
     font-size: 1.8em;
     letter-spacing: 1px;
-    border-bottom: 3px solid var(--color-accent-gold); 
+    border-bottom: 3px solid var(--color-accent-gold);
     padding-bottom: 10px;
     margin-top: 0;
     margin-bottom: 20px;
@@ -995,10 +962,10 @@ body {
     align-items: center;
 }
 
-/* Tag (e.g., 'Daily', 'Morning', 'Evening') */
+/* Tag */
 .tag-asym {
-    background-color: var(--color-accent-gold); 
-    color: var(--color-charcoal-text); 
+    background-color: var(--color-accent-gold);
+    color: var(--color-charcoal-text);
     padding: 4px 10px;
     border-radius: 4px;
     text-transform: uppercase;
@@ -1006,7 +973,7 @@ body {
     font-family: var(--font-body);
 }
 
-/* List Item Styles */
+/* List Items */
 .service-list-asym {
     list-style: none;
     padding: 0;
@@ -1022,20 +989,18 @@ body {
     border-radius: 4px;
 }
 
-/* Alternating Stripes (Remains subtle) */
 .striped-item:nth-child(even) {
-    background-color: rgba(0, 0, 0, 0.03); 
+    background-color: rgba(0, 0, 0, 0.03);
 }
 
-/* Highlighted Item (Subtle blue highlight remains effective) */
 .highlight-item {
-    background-color: rgba(44, 54, 120, 0.05); /* Lighter transparent Primary Dark highlight */
+    background-color: rgba(44, 54, 120, 0.05);
     font-weight: 500;
 }
 
 .time-slot-asym {
     font-weight: 700;
-    color: var(--color-accent-gold); 
+    color: var(--color-accent-gold);
     flex-basis: 30%;
 }
 
@@ -1053,174 +1018,36 @@ body {
     border-top: 1px solid #e0e0e0;
 }
 
-/* Call-to-Action Button (CTA) */
+/* CTA Button */
 .btn-cta-asym {
-    background-color: var(--color-accent-gold); 
-    color: var(--color-charcoal-text); 
-    border: 2px solid var(--color-accent-gold); 
-    padding: 15px 40px;
-    border-radius: 4px;
-    font-size: 1.1em;
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-top: 40px;
-    display: inline-block;
-    text-decoration: none;
-    transition: all 0.3s ease;
-}
-
-.btn-cta-asym:hover {
-    background-color: transparent;
-    color: var(--color-accent-gold); 
-    border-color: var(--color-accent-gold);
-}
-
-
-
-
-
-.btn-cta-asym {
-    /* Changed background and border color to Accent Gold */
-    background-color: var(--color-accent-gold); 
-    color: var(--color-charcoal-text); /* Changed text color for contrast */
-    border: 2px solid var(--color-accent-gold); 
-    padding: 15px 40px;
-    border-radius: 4px;
-    font-size: 1.1em;
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-top: 40px;
-    display: inline-block;
-    text-decoration: none;
-    transition: all 0.3s ease;
-}
-
-.btn-cta-asym:hover {
-    background-color: transparent;
-    color: var(--color-accent-gold); /* Hover text is Accent Gold */
-    border-color: var(--color-accent-gold);
-}
-
-
-/* ===================== RESPONSIVE ADJUSTMENTS ===================== */
-@media (max-width: 1050px) {
-    .program-item-asym {
-        flex-direction: column;
-        gap: 20px;
-        padding: 40px 5%;
-    }
-    .asym-text-content, .asym-media-content {
-        flex-basis: 100%;
-        width: 100%;
-    }
-    .item-right-text .asym-media-content {
-        order: 0; 
-    }
-
-    .reflection-magazine-grid {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
-        gap: 30px;
-    }
-    .featured-post .post-text-content-mag h4 {
-        font-size: 2.5em;
-    }
-}
-@media (max-width: 600px) {
-    .asym-header, .asym-header-light {
-        font-size: 2.5em;
-    }
-}
-
-
-/* ===================== RESPONSIVE ADJUSTMENTS ===================== */
-@media (max-width: 1050px) {
-    .program-item-asym {
-        flex-direction: column;
-        gap: 20px;
-        padding: 40px 5%;
-    }
-    .asym-text-content, .asym-media-content {
-        flex-basis: 100%;
-        width: 100%;
-    }
-    .item-right-text .asym-media-content {
-        order: 0; /* Reset order on mobile */
-    }
-
-    .reflection-magazine-grid {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
-        gap: 30px;
-    }
-    .featured-post .post-text-content-mag h4 {
-        font-size: 2.5em;
-    }
-}
-@media (max-width: 600px) {
-    .asym-header, .asym-header-light {
-        font-size: 2.5em;
-    }
-}/* ===================== NEW CSS FOR BOUNCY EFFECT (Community Section) ===================== */
-
-/* This targets the container holding the text and media in the Community section */
-.program-item-asym {
-    /* Keep existing styles, adding transition for smooth bounce */
-    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
-    /* Add a subtle initial shadow to make the bounce more visible */
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05); 
-    border-radius: 8px; /* Added border-radius for aesthetic on the full container */
-}
-
-/* Apply the bouncy/lift effect on hover */
-.program-item-asym:hover {
-    /* Lift the card up slightly */
-    transform: translateY(-8px); 
-    /* Increase the shadow significantly for the "pop" effect */
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2); 
-}
-
-/* Ensure the image container also participates in the visual effect if needed, though
-   lifting the parent (.program-item-asym) is usually sufficient. */
-.asym-media-content {
-    transition: border 0.3s ease-out; /* Keep existing transition */
-}
-
-/* Optional: Adding a slight zoom effect to the image on hover for more dynamism */
-.program-item-asym:hover .asym-image {
-    transform: scale(1.02);
-    transition: transform 0.3s ease-out;
-}
-
-/* ===================== NEW CSS FOR SCHEDULE SECTION EFFECT (Accent Border Pulse) ===================== */
-
-.schedule-list-block-asym {
-    /* Base styles (keep existing) */
-    background-color: var(--color-card-white);
+    background-color: var(--color-accent-gold);
     color: var(--color-charcoal-text);
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-    text-align: left;
-    
-    /* Key for the new effect: set a transparent border and transition */
-    border: 3px solid transparent; 
-    transition: all 0.3s ease-out; /* Smooth transition for lift and border change */
+    border: 2px solid var(--color-accent-gold);
+    padding: 15px 40px;
+    border-radius: 4px;
+    font-size: 1.1em;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 40px;
+    display: inline-block;
+    text-decoration: none;
+    transition: all 0.3s ease;
 }
 
-/* Apply the Accent Border Pulse effect on hover */
-.schedule-list-block-asym:hover {
-    /* Slight vertical lift */
-    transform: translateY(-5px); 
-    
-    /* Apply the Vivid Peach accent color to the border */
-    border: 3px solid var(--color-peach-vivid); 
-    
-    /* Slightly increase shadow for visual pop */
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+.btn-cta-asym:hover {
+    background-color: transparent;
+    color: var(--color-accent-gold);
+    border-color: var(--color-accent-gold);
 }
+
+/* Responsive */
+@media (max-width: 600px) {
+    .asym-header-light {
+        font-size: 2.5em;
+    }
+}
+
 
 /* ===================== FOOTER: CHURCH PROFESSIONAL LAYOUT (Deep Blue/Violet) ===================== */
 
@@ -1407,279 +1234,177 @@ body {
 }
 
 
-
-/* Base container and typography */
+/* ================= ASYMMETRICAL MOSAIC ================= */
 .asymmetrical-mosaic {
-    padding: 100px 20px;
-    background-color: #fcfcfc; /* Near white, very subtle background */
-    font-family: 'Poppins', 'Helvetica Neue', sans-serif;
-    overflow: hidden; /* Important to handle the offsetting margins */
+  padding: 100px 20px;
+  background-color: #fcfcfc;
+  font-family: 'Poppins', 'Helvetica Neue', sans-serif;
+  overflow: hidden;
 }
 
-/* Header Styling - Large and punchy */
+/* ================= HEADER ================= */
 .mosaic-header {
-    max-width: 900px;
-    margin: 0 auto 60px auto;
-    text-align: center;
+  max-width: 900px;
+  margin: 0 auto 60px;
+  text-align: center;
 }
+
 .mosaic-header h1 {
-    font-size: 3.5em; /* Bold, large headline */
-    font-weight: 800;
-    line-height: 1.1;
-    color:#2c3678;
+  font-size: 2.8em;
+  font-weight: 500;
+  line-height: 1.1;
+  color: #4E344E;
 }
+
 .mosaic-header p {
-    font-size: 1.25em;
-    color:#2c3678;
-    margin-top: 20px;
+  font-size: 1.25em;
+  color: #6c7a89;
+  margin-top: 20px;
 }
 
-/* --- The Asymmetrical Grid Container --- */
+/* ================= GRID ================= */
 .mosaic-grid-cards {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: grid;
-    /* Create three columns, allowing cards to span different sizes */
-    grid-template-columns: 1fr 1fr 1fr; 
-    gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
 }
 
-/* --- Card Styles --- */
+/* ================= CARDS ================= */
 .mosaic-card {
-    background-color: #ffffff;
-    padding: 35px;
-    border-radius: 10px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
-    transition: all 0.3s ease;
-    border-top: 5px solid#2c3678; /* Accent line for pop */
+  background-color: #cdb9cd;
+  padding: 35px;
+  border-radius: 10px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  border-top: 5px solid #4E344E;
 }
 
 .mosaic-card:hover {
-    transform: translateY(-8px); /* Subtle lift on hover */
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
 }
 
 .card-number {
-    font-size: 3em;
-    font-weight: 800;
-    color: #e0e0e0; /* Light, subtle number */
-    display: block;
-    margin-bottom: 5px;
-    line-height: 1;
+  font-size: 3em;
+  font-weight: 800;
+  color: #8e8e92;
+  display: block;
+  margin-bottom: 5px;
 }
 
 .mosaic-card h3 {
-    font-size: 1.5em;
-    color:#2c3678;
-    margin-top: 5px;
-    margin-bottom: 15px;
+  font-size: 1.5em;
+  color: #4E344E;
+  margin-bottom: 15px;
 }
+
 .mosaic-card p {
-    font-size: 1em;
-    line-height: 1.6;
-    color: #555;
+  font-size: 1em;
+  line-height: 1.6;
+  color: #555;
 }
 
-/* --- Asymmetrical Styling (The Trend) --- */
-
-/* Card 1: Large and spans two columns on the left */
+/* ================= ASYMMETRY ================= */
 .card-large {
-    grid-column: span 2; 
+  grid-column: span 2;
 }
 
-/* Card 2: Small and fills the remaining column (right side, top) */
 .card-small {
-    grid-column: span 1;
-    background-color: #f7f7f7; /* Slight color difference for small card */
-    padding: 35px 25px;
+  grid-column: span 1;
+  padding: 35px 25px;
 }
 
-/* Card 3: Large, but placed below Card 2 and is OFFSET */
 .card-offset-bottom {
-    grid-column: 2 / span 2; /* Starts in column 2 and spans 2 columns */
-    margin-top: -80px; /* **Negative margin to overlap/offset it upward** */
-    background-color: #f5f3fe; /* Light accent color */
-    border-top-color:#2c3678;
+  grid-column: 2 / span 2;
+  margin-top: -80px;
+  background-color: #ffffff;
+  border-top-color: #4E344E;
 }
 
-
-/* Mobile Fallback: Stack columns vertically */
+/* ================= MOBILE ================= */
 @media (max-width: 992px) {
-    .mosaic-grid-cards {
-        grid-template-columns: 1fr; /* Single column layout on small screens */
-        gap: 40px;
-    }
-    .card-large, .card-small {
-        grid-column: span 1;
-    }
-    .card-offset-bottom {
-        grid-column: span 1;
-        margin-top: 0; /* Remove offset on mobile */
-    }
-}
+  .mosaic-grid-cards {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
 
-/* Base container and typography */
-.asymmetrical-mosaic {
-    padding: 100px 20px;
-    background-color: #fcfcfc; /* Near white, very subtle background */
-    font-family: 'Poppins', 'Helvetica Neue', sans-serif;
-    overflow: hidden; /* Important to handle the offsetting margins */
-}
-
-/* Header Styling - Large and punchy */
-.mosaic-header {
-    max-width: 900px;
-    margin: 0 auto 60px auto;
-    text-align: center;
-}
-.mosaic-header h1 {
-    font-size: 3.5em; /* Bold, large headline */
-    font-weight: 800;
-    line-height: 1.1;
-    color:  #2c3678;
-}
-.mosaic-header p {
-    font-size: 1.25em;
-    color: #6c7a89;
-    margin-top: 20px;
-}
-
-/* --- The Asymmetrical Grid Container --- */
-.mosaic-grid-cards {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: grid;
-    /* Create three columns, allowing cards to span different sizes */
-    grid-template-columns: 1fr 1fr 1fr; 
-    gap: 20px;
-}
-
-/* --- Card Styles --- */
-.mosaic-card {
-    background-color: #ffffff;
-    padding: 35px;
-    border-radius: 10px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
-    transition: all 0.3s ease;
-    border-top: 5px solid #2c3678; /* Accent line for pop */
-}
-
-.mosaic-card:hover {
-    transform: translateY(-8px); /* Subtle lift on hover */
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
-}
-
-.card-number {
-    font-size: 3em;
-    font-weight: 800;
-    color: #8e8e92; /* Light, subtle number */
-    display: block;
-    margin-bottom: 5px;
-    line-height: 1;
-}
-
-.mosaic-card h3 {
-    font-size: 1.5em;
-    color: #2c3678;
-    margin-top: 5px;
-    margin-bottom: 15px;
-}
-.mosaic-card p {
-    font-size: 1em;
-    line-height: 1.6;
-    color: #555;
-}
-
-/* --- Global Styles for Footer --- */
-.footer-church {
-    /* Use a deep, spiritual color palette: Deep Navy/Teal for background */
-    background-color: #1a374d; 
-    color: #f0f0f0; /* Light text color for contrast */
-    font-family: 'Roboto', sans-serif;
-    padding-top: 50px; /* Space above the content */
-}
-
-/* --- Main Container Layout (CSS Grid) --- */
-.footer-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px 40px;
-    display: grid;
-    /* Define 4 columns, adjusting the first one to be larger for the logo/about text */
-    grid-template-columns: 2fr 1fr 1fr 1.5fr; 
-    gap: 30px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Subtle divider */
-}
-
-/* --- Footer Column General Styling --- */
-.footer-col {
-    padding: 10px;
-}
-
-/* --- Logo & About Column --- */
-.footer-about .footer-logo {
-    max-width: 100px; /* Control logo size */
-    height: auto;
-    margin-bottom: 10px;
-    filter: brightness(1.2); /* Slightly brighten the logo against the dark background */
-}
-
-.footer-about .footer-title {
-    font-size: 1.4rem;
+  .card-large,
+  .card-small,
+  .card-offset-bottom {
+    grid-column: span 1;
     margin-top: 0;
-    margin-bottom: 5px;
-    color: #ffffff; /* Use a light gold/cream accent for the main title */
+  }
 }
 
-.footer-about p {
-    font-size: 0.95rem;
-    line-height: 1.5;
-    color: #c0c0c0;
+/* Footer main */
+.footer-church {
+  background-color: #f7f3e8; /* Pale warm background */
+  color: #444;
+  padding: 60px 20px 20px 20px;
+  font-family: 'Roboto', sans-serif;
 }
 
-/* --- Heading Styles --- */
+/* Footer container */
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap; /* Makes it responsive */
+  gap: 40px; /* Space between columns */
+  justify-content: space-between;
+}
+
+/* Footer columns */
+.footer-col {
+  flex: 1 1 200px; /* Responsive columns with minimum width */
+}
+
+.footer-about {
+  flex: 1 1 250px;
+}
+
+.footer-logo {
+  width: 200px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.footer-title {
+  font-family: 'Times New Roman', serif;
+  font-size: 1.2rem;
+  font-weight: normal;
+  margin-bottom: 10px;
+}
+
+/* Column headings */
 .footer-col h4 {
-    font-size: 1.1rem;
-    font-weight: 700;
-    margin-bottom: 15px;
-    /* Underline effect using a pseudo-element for style */
-    display: inline-block;
-    color: #f0f0f0;
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin-bottom: 15px;
+  text-transform: uppercase;
 }
 
-/* --- List Styling (Links) --- */
+/* Links list */
 .footer-col ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .footer-col ul li {
-    margin-bottom: 8px;
+  margin-bottom: 10px;
 }
 
 .footer-col ul li a {
-    text-decoration: none;
-    color: #c0c0c0; /* Lighter color for list items */
-    font-size: 0.9rem;
-    transition: color 0.3s, padding-left 0.3s;
-    display: inline-block;
+  text-decoration: none;
+  color: #444;
+  transition: color 0.3s;
 }
 
 .footer-col ul li a:hover {
-    color: #f7b731; /* Gold accent on hover */
-    padding-left: 5px; /* Subtle hover effect */
-}
-
-/* --- Contact Info Column --- */
-.footer-col p {
-    margin-bottom: 10px;
-    font-size: 0.9rem;
-    color: #c0c0c0;
-}
-
-.footer-col p:last-child {
-    margin-bottom: 0;
+  color: #a67c52; /* Subtle gold accent */
 }
 
 /* --- Footer Bottom Section (Copyright) --- */
@@ -1688,7 +1413,7 @@ body {
     padding: 20px 20px;
     font-size: 0.8rem;
     color: #a0a0a0;
-    background-color: #152d40; /* Slightly darker shade for the bottom bar */
+    background-color: #4E344E; /* Slightly darker shade for the bottom bar */
 }
 
 .footer-bottom p {
@@ -1735,6 +1460,9 @@ body {
 }
 
 
+.footer-bottom {
+  padding: 10px 0;
+}
 
 
 
@@ -1872,7 +1600,7 @@ h1 {
 .contact-form button {
     width: 100%;
     padding: 1rem; /* Smaller padding for mobile */
-    background-color: #1a374d; 
+    background-color: #4E344E; 
     color: white;
     border: none;
     font-size: 1.1rem;
@@ -1883,7 +1611,7 @@ h1 {
 }
 
 .contact-form button:hover {
-    background-color: #1f5985;
+    background-color: #773a77;
 }
 
 
@@ -2021,14 +1749,14 @@ h1 {
 }
 
 
-/* what we do for belive */
+/* what we  belive */
 
 /* ===========================
    Section and Container
 =========================== */
 .mwci-section {
     padding: 60px 20px;
-    background: linear-gradient(120deg, #f7f7f7, #e0e6f1); /* subtle gradient */
+    background: linear-gradient(120deg, #4E344E, #e0e6f1); /* subtle gradient */
 }
 .container {
     max-width: 1200px;
@@ -2044,8 +1772,8 @@ h1 {
 }
 .section-header h2 {
     font-size: 2.8em;
-    color: #2c3678;
-    font-weight: 700;
+    color: #ffffff;
+    font-weight: 70;
     margin-bottom: 12px;
     letter-spacing: 1px;
 }
@@ -2071,7 +1799,7 @@ h1 {
    Belief Item Styling
 =========================== */
 .belief-item {
-    background:#FAF8F0;
+    background:#ffffff;
     border-radius: 12px;
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
     padding: 35px 25px;
@@ -2089,7 +1817,7 @@ h1 {
     position: absolute;
     width: 120%;
     height: 120%;
-    background: rgba(0, 123, 255, 0.1);
+    background: rgba(140, 0, 255, 0.1);
     top: -110%;
     left: -10%;
     transform: rotate(45deg);
@@ -2109,7 +1837,7 @@ h1 {
 .icon-placeholder {
     font-size: 3.2em;
     margin-bottom: 18px;
-    color: #2c3678;
+    color: #4E344E;
     transition: transform 0.4s ease, color 0.4s ease;
 }
 .belief-item:hover .icon-placeholder {
@@ -2120,7 +1848,7 @@ h1 {
 /* Text Styling */
 .belief-item h3 {
     font-size: 1.6em;
-    color: #2c3678;
+    color: #4E344E;
     margin-bottom: 10px;
     font-weight: 600;
 }
@@ -2150,8 +1878,8 @@ h1 {
 /* our_pastor page */
 /* Full grey background */
 .pastor-main-section {
-    background: #eaeaea;
-    padding: 80px 0;
+    background: #4E344E;
+    padding: 90px 0;
     padding-top: 0px;
 }
 
@@ -2162,19 +1890,19 @@ h1 {
     margin: 0 auto;
     display: flex;
     background: white;
-    height: 500px;
+    height: 1000px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
 /* LEFT SIDE — IMAGE */
 .pastor-main-left {
     width: 50%;
-    height: 100%;
+    height: 70%;
 }
 
 .pastor-main-left img {
     width: 100%;
-    height: 100%;
+    height: 80%;
     object-fit: cover;
 }
 
@@ -2204,10 +1932,10 @@ h1 {
 
 /* Pastor Name */
 .pastor-main-name {
-    font-size: 40px;
+    font-size: 30px;
     font-weight: 700;
     margin: 0 0 15px;
-    color: #1c1616;
+    color: #4E344E;
 }
 
 /* Description */
@@ -2220,6 +1948,43 @@ h1 {
     
     
 }
+
+
+/* Founder / Pastor Section Text Styling */
+.highlight {
+    font-weight: 700;
+    color: #5f3e5f;
+}
+
+.highlight-dark {
+    font-weight: 700;
+    color: #684563;
+}
+
+.scripture-block {
+    margin: 2px 0;
+    padding: 18px 24px;
+    background: #ebd3eb;
+    border-left: 5px solid #4E344E;
+    border-radius: 6px;
+}
+
+.scripture {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #4E344E;
+}
+
+.gap {
+    margin-top: 0px;
+}
+
+
+
+
+
+
+
 
 /* RESPONSIVE */
 @media (max-width: 900px) {
@@ -2238,6 +2003,13 @@ h1 {
         text-align: center;
     }
 }
+
+
+
+
+
+
+
 
 
 /* ================================
@@ -2384,20 +2156,6 @@ h1 {
 }
 
 /* ===============================
-   BIOGRAPHY LINK
-================================= */
-.leader-link {
-    color: #0093ff;
-    font-size: 18px;
-    font-weight: 600;
-    text-decoration: none;
-}
-
-.leader-link:hover {
-    text-decoration: underline;
-}
-
-/* ===============================
    RESPONSIVE BREAKPOINTS
 ================================= */
 
@@ -2493,7 +2251,7 @@ h1 {
 
 .belief-heading {
   font-size: 30px;
-  color: #c41212;
+  color: #4E344E;
   margin-bottom: 20px;
   margin-top: 1px;
 }
@@ -2531,3 +2289,482 @@ h1 {
 
 
 
+.belief-btn-center {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.btn-learn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 36px;
+
+  background: linear-gradient(135deg, #4E344E, #7a4f7a);
+  color: #ffffff;
+
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+
+  border-radius: 50px;
+  text-decoration: none;
+
+  box-shadow: 0 10px 25px rgba(78, 52, 78, 0.35);
+  transition: all 0.35s ease;
+}
+
+.btn-learn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 35px rgba(78, 52, 78, 0.45);
+  filter: brightness(1.05);
+}
+
+
+
+/*services next page button*/
+.btn-services {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.btn-modern {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #8B5E3C; /* brown theme */
+    text-decoration: none;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.btn-modern .arrow {
+    display: inline-block;
+    margin-left: 5px;
+    transition: transform 0.3s ease;
+}
+
+.btn-modern:hover {
+    color: #C19A6B; /* lighter brown on hover */
+}
+
+.btn-modern:hover .arrow {
+    transform: translateX(5px); /* arrow slides on hover */
+}
+
+
+
+
+
+
+
+/*about bg image */
+.hero-about {
+    position: relative;
+    width: 100%;
+    height: 70vh; /* adjust as needed */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+}
+
+/* Optional overlay for better text visibility */
+.hero-about::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+   
+    z-index: 1;
+}
+
+.hero-about-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-about-content h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    text-shadow: 0 4px 10px rgba(11, 11, 11, 0.5);
+    margin: 0;
+}
+
+
+
+/* vision bg css */
+/* ===========================
+   HERO VISION SECTION
+=========================== */
+.hero-vision {
+    position: relative;
+    width: 100%;
+    height: 65vh; /* Adjust height */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    /* Dark overlay */
+    overflow: hidden;
+}
+
+.hero-vision h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero-vision {
+        height: 50vh;
+    }
+
+    .hero-vision h1 {
+        font-size: 2.2rem;
+    }
+}
+
+/* ===================== VISION SECTION ===================== */
+.vision-section {
+    background-color: #ffffff;
+    padding: 60px 8%;
+}
+
+.vision-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.vision-left {
+    flex: 1 1 480px;
+}
+
+.vision-title {
+    font-size: 2.8rem;
+    color: #4E344E;
+    margin-bottom: 20px;
+}
+
+.vision-text {
+    font-size: 1.35rem;
+    color: #444;
+    line-height: 1.8;
+    font-weight: 500;
+    margin-bottom: 25px;
+}
+
+.vision-points {
+    list-style: none;
+    padding: 0;
+}
+
+.vision-points li {
+    font-size: 1.1rem;
+    color: #4E344E;
+    margin-bottom: 10px;
+}
+
+.vision-right {
+    flex: 1 1 400px;
+}
+
+.vision-img {
+    width: 100%;
+    border-radius: 12px;
+    object-fit: cover;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .vision-container {
+      flex-direction: column;
+      text-align: center;
+  }
+}
+
+
+
+
+
+
+
+
+
+/*mission css */
+/* ===================== MISSION SECTION ===================== */
+.mission-section {
+    background-color: #ffffff; /* soft cream tone */
+    padding: 60px 8%;
+}
+
+.mission-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.mission-left {
+    flex: 1 1 400px;
+}
+
+.mission-img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+    object-fit: cover;
+}
+
+.mission-right {
+    flex: 1 1 480px;
+}
+
+.mission-title {
+    font-size: 2.8rem;
+    color: #4E344E; /* rich brown */
+    margin-bottom: 20px;
+}
+
+.mission-text {
+    font-size: 1.35rem;
+    line-height: 1.8;
+    color: #444;
+    font-weight: 500;
+    margin-bottom: 25px;
+}
+
+.mission-points {
+    list-style: none;
+    padding: 0;
+}
+
+.mission-points li {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    color: #4E344E;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .mission-container {
+      flex-direction: column;
+      text-align: center;
+  }
+}
+
+
+
+
+
+/*home page about leran more*/
+/* Center the button container */
+.btn-about {
+    text-align: center;  
+    margin-top: 30px;
+}
+
+/* Button Style */
+.btn-modern {
+    display: inline-block;
+    padding: 14px 28px;
+    background: #6b573a; /* warm brown */
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: 0.3s ease;
+    letter-spacing: 0.5px;
+    position: relative;
+}
+
+/* Arrow style */
+.btn-modern .arrow {
+    margin-left: 6px;
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.btn-modern:hover .arrow {
+    transform: translateX(6px);
+}
+
+.section-whatwedo {
+    padding: 90px 20px;
+    background: #f6efe7;     /* Soft warm/brown theme */
+}
+
+.wwd-container {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.section-whatwedo h2 {
+    font-size: 42px;
+    font-weight: 70;
+    color: #4E344E; 
+    margin-bottom: 15px;
+}
+
+.section-whatwedo p {
+    font-size: 18px;
+    line-height: 1.7;
+    color: #787678;
+    margin-bottom: 40px;
+}
+.btn-wwd {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+
+  color: #4E344E;
+  font-size: 18px;
+  font-weight: 600;
+  text-decoration: none;
+
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+/* Subtle underline */
+.btn-wwd::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0%;
+  height: 2px;
+  background: #4E344E;
+  transition: width 0.3s ease;
+}
+.btn-wwd {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #4E344E;
+  font-size: 18px;
+  font-weight: 600;
+  text-decoration: none;
+  position: relative;
+
+  /* 3D text effect using layered shadows */
+  text-shadow: 0 1px 0 rgba(0,0,0,0.1), 0 2px 0 rgba(0,0,0,0.08);
+  
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Underline effect */
+.btn-wwd::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background: currentColor;
+  transition: width 0.35s ease-out;
+}
+
+/* Arrow effect */
+.btn-wwd span {
+  display: inline-block;
+  transition: transform 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Hover: lift text and arrow */
+.btn-wwd:hover {
+  color: #6b4a6b;
+  transform: translateY(-2px);
+  text-shadow: 0 4px 6px rgba(0,0,0,0.15), 0 2px 3px rgba(0,0,0,0.1);
+}
+
+.btn-wwd:hover::after {
+  width: 100%;
+}
+
+.btn-wwd:hover span {
+  transform: translateX(8px) scale(1.1);
+}
+
+/* Active: press text down */
+.btn-wwd:active {
+  transform: translateY(0) scale(0.98);
+  text-shadow: 0 1px 0 rgba(220, 17, 17, 0.08), 0 2px 0 rgba(0,0,0,0.06);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.cta {
+  padding: 80px 20px;      /* Top–Bottom | Left–Right */
+  text-align: center;
+  background-color: #d5c5a6; /* optional – remove if not needed */
+}
+
+.cta h2 {
+  max-width: 720px;
+  margin: 0 auto 28px;     /* space between text and button */
+  line-height: 1.4;
+}
+
+.cta .btn {
+  margin-top: 10px;
+}
+@media (max-width: 768px) {
+  .cta {
+    padding: 60px 16px;
+  }
+
+  .cta h2 {
+    font-size: 22px;
+  }
+}
+
+
+.church-planting-img {
+  width: 320px;     /* control size here */
+  height: auto;     /* keep ratio */
+  max-width: 100%;
+}
+@media (max-width: 768px) {
+  .church-planting-img {
+    width: 250px;
+  }
+}

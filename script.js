@@ -45,3 +45,43 @@ document.querySelectorAll(".btn-read").forEach(button => {
 
 //*contactpage js *//
 
+document.querySelector(".contact-form").addEventListener("submit", function(e) {
+    e.preventDefault(); // Stop form submission
+
+    let name = document.getElementById("name").value.trim();
+    let email = document.getElementById("email").value.trim();
+    let website = document.getElementById("website").value.trim();
+    let message = document.getElementById("message").value.trim();
+
+    // Name validation
+    if (name.length < 3) {
+        alert("Name must be at least 3 characters.");
+        return;
+    }
+
+    // Email validation
+    let emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+    if (!email.match(emailPattern)) {
+        alert("Enter a valid email address.");
+        return;
+    }
+
+    // Website validation (optional)
+    if (website !== "") {
+        let urlPattern = /^(https?:\/\/)?([\w\-])+(\.[\w\-]+)+[/#?]?.*$/;
+        if (!website.match(urlPattern)) {
+            alert("Enter a valid website URL.");
+            return;
+        }
+    }
+
+    // Message validation
+    if (message.length < 10) {
+        alert("Message must be at least 10 characters.");
+        return;
+    }
+
+    // If all valid
+    alert("Form submitted successfully!");
+    this.submit();
+});
