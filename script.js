@@ -85,3 +85,77 @@ document.querySelector(".contact-form").addEventListener("submit", function(e) {
     alert("Form submitted successfully!");
     this.submit();
 });
+
+
+
+
+
+
+
+/*gallery*/
+const thumbnails = document.querySelectorAll('.thumbnails img');
+const currentImage = document.getElementById('currentImage');
+
+let currentIndex = 0;
+
+function showImage(img){
+    currentImage.src = img.src;
+
+    thumbnails.forEach(item=>{
+        item.style.borderColor = "transparent";
+    });
+
+    img.style.borderColor = "#4b2d52";
+
+    currentIndex = [...thumbnails].indexOf(img);
+}
+
+function nextImage(){
+    currentIndex++;
+
+    if(currentIndex >= thumbnails.length){
+        currentIndex = 0;
+    }
+
+    showImage(thumbnails[currentIndex]);
+}
+
+function prevImage(){
+    currentIndex--;
+
+    if(currentIndex < 0){
+        currentIndex = thumbnails.length - 1;
+    }
+
+    showImage(thumbnails[currentIndex]);
+}
+
+window.onload = () =>{
+    showImage(thumbnails[0]);
+}
+
+// Function to open the Lightbox
+function openLightbox(imageSrc) {
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    
+    lightboxImg.src = imageSrc; // Set the full screen image src
+    lightbox.classList.add('active'); // Display the lightbox
+}
+
+// Function to close the Lightbox
+function closeLightbox() {
+    const lightbox = document.getElementById('lightbox');
+    lightbox.classList.remove('active'); // Hide the lightbox
+}
+
+// Optional: Close the lightbox if user clicks anywhere outside the image
+document.getElementById('lightbox').addEventListener('click', function(e) {
+    if (e.target === this) {
+        closeLightbox();
+    }
+});
+
+
+
+
